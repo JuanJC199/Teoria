@@ -10,10 +10,7 @@ public class Tienda {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        System.out.println("Hola Mundo");
-//        new Proveedores().setVisible(true);
-//        new Productos().setVisible(true);
-        new Orden_Compras().setVisible(true);
+        new Compras().setVisible(true);
     }
     
 }
