@@ -9,12 +9,12 @@ package tienda;
  *
  * @author Juan
  */
-public class MDI extends javax.swing.JFrame {
+public class VentanaMovimientos extends javax.swing.JFrame {
 
     /**
-     * Creates new form MDI
+     * Creates new form VentanaMovimientos
      */
-    public MDI() {
+    public VentanaMovimientos() {
         initComponents();
     }
 
@@ -27,61 +27,38 @@ public class MDI extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jMenu1 = new javax.swing.JMenu();
-        jMenuBar1 = new javax.swing.JMenuBar();
-        btCompras = new javax.swing.JMenu();
-        btAlmacen = new javax.swing.JMenu();
-        btPedidos = new javax.swing.JMenu();
-
-        jMenu1.setText("jMenu1");
+        btAceptar = new javax.swing.JButton();
+        btCancelar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        btCompras.setText("Compras");
-        btCompras.setActionCommand("Compras");
-        btCompras.setName(""); // NOI18N
-        btCompras.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                btComprasMouseClicked(evt);
-            }
-        });
-        jMenuBar1.add(btCompras);
+        btAceptar.setText("Aceptar");
 
-        btAlmacen.setText("Almacen");
-        btAlmacen.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                btAlmacenMouseClicked(evt);
-            }
-        });
-        jMenuBar1.add(btAlmacen);
-
-        btPedidos.setText("Pedidos");
-        jMenuBar1.add(btPedidos);
-
-        setJMenuBar(jMenuBar1);
+        btCancelar.setText("Cancelar");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(85, 85, 85)
+                .addComponent(btAceptar, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(btCancelar, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(102, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 279, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(228, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                    .addComponent(btCancelar, javax.swing.GroupLayout.DEFAULT_SIZE, 35, Short.MAX_VALUE)
+                    .addComponent(btAceptar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(37, 37, 37))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void btComprasMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btComprasMouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btComprasMouseClicked
-
-    private void btAlmacenMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btAlmacenMouseClicked
-        // TODO add your handling code here:
-        
-    }//GEN-LAST:event_btAlmacenMouseClicked
 
     /**
      * @param args the command line arguments
@@ -100,29 +77,26 @@ public class MDI extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(MDI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(VentanaMovimientos.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(MDI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(VentanaMovimientos.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(MDI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(VentanaMovimientos.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(MDI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(VentanaMovimientos.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new MDI().setVisible(true);
+                new VentanaMovimientos().setVisible(true);
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JMenu btAlmacen;
-    private javax.swing.JMenu btCompras;
-    private javax.swing.JMenu btPedidos;
-    private javax.swing.JMenu jMenu1;
-    private javax.swing.JMenuBar jMenuBar1;
+    private javax.swing.JButton btAceptar;
+    private javax.swing.JButton btCancelar;
     // End of variables declaration//GEN-END:variables
 }
