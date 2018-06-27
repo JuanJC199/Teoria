@@ -4,18 +4,16 @@
  * and open the template in the editor.
  */
 package tienda;
-
-/**
- *
- * @author Juan
- */
 public class Tienda {
 
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+        System.out.println("Hola Mundo");
+//        new Proveedores().setVisible(true);
+//        new Productos().setVisible(true);
+        new Orden_Compras().setVisible(true);
     }
     
 }
