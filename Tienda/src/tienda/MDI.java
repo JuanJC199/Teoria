@@ -89,7 +89,7 @@ public class MDI extends javax.swing.JFrame {
     private void btComprasMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btComprasMouseClicked
         // TODO add your handling code here:
         
-        new Compras().setVisible(true);
+        //new Compras().setVisible(true);
     }//GEN-LAST:event_btComprasMouseClicked
 
     private void btAlmacenMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btAlmacenMouseClicked
