@@ -32,6 +32,9 @@ public class MDI extends javax.swing.JFrame {
         jMenu1 = new javax.swing.JMenu();
         jMenuBar1 = new javax.swing.JMenuBar();
         btCompras = new javax.swing.JMenu();
+        jMenuItem1 = new javax.swing.JMenuItem();
+        jMenuItem2 = new javax.swing.JMenuItem();
+        jMenuItem4 = new javax.swing.JMenuItem();
         btAlmacen = new javax.swing.JMenu();
         btPedidos = new javax.swing.JMenu();
 
@@ -46,6 +49,16 @@ public class MDI extends javax.swing.JFrame {
                 btComprasMouseClicked(evt);
             }
         });
+
+        jMenuItem1.setText("Proveedores");
+        btCompras.add(jMenuItem1);
+
+        jMenuItem2.setText("Productos");
+        btCompras.add(jMenuItem2);
+
+        jMenuItem4.setText("Ordenes de compra");
+        btCompras.add(jMenuItem4);
+
         jMenuBar1.add(btCompras);
 
         btAlmacen.setText("Almacen");
@@ -78,7 +91,7 @@ public class MDI extends javax.swing.JFrame {
     private void btComprasMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btComprasMouseClicked
         // TODO add your handling code here:
         
-        new Compras().setVisible(true);
+        //new Compras().setVisible(true);
     }//GEN-LAST:event_btComprasMouseClicked
 
     private void btAlmacenMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btAlmacenMouseClicked
@@ -127,5 +140,8 @@ public class MDI extends javax.swing.JFrame {
     private javax.swing.JMenu btPedidos;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenuBar jMenuBar1;
+    private javax.swing.JMenuItem jMenuItem1;
+    private javax.swing.JMenuItem jMenuItem2;
+    private javax.swing.JMenuItem jMenuItem4;
     // End of variables declaration//GEN-END:variables
 }
