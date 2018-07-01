@@ -1,4 +1,6 @@
-package tienda;
+package JFrames;
+
+import tienda.Proveedores;
 
 /**
  *

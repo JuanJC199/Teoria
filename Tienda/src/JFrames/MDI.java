@@ -3,7 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package tienda;
+package JFrames;
+
+import JFrames.Compras;
 
 /**
  *
@@ -38,7 +40,6 @@ public class MDI extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         btCompras.setText("Compras");
-        btCompras.setActionCommand("Compras");
         btCompras.setName(""); // NOI18N
         btCompras.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
