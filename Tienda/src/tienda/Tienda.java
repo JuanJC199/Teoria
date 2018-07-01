@@ -5,8 +5,6 @@
  */
 package tienda;
 
-import JFrames.MDI;
-
 public class Tienda {
 
     /**

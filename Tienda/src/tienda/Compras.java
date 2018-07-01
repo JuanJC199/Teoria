@@ -1,4 +1,4 @@
-package JFrames;
+package tienda;
 
 import tienda.Proveedores;
 
