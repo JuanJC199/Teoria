@@ -5,6 +5,8 @@
  */
 package tienda;
 
+import tienda.Compras;
+
 /**
  *
  * @author Juan

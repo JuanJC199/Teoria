@@ -1,5 +1,7 @@
 package tienda;
 
+import tienda.Proveedores;
+
 /**
  *
  * @author PC
