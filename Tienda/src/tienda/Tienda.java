@@ -10,7 +10,7 @@ public class Tienda {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        new Compras().setVisible(true);
+        new MDI().setVisible(true);
     }
     
 }

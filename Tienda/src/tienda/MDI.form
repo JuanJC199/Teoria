@@ -16,7 +16,6 @@
         <Menu class="javax.swing.JMenu" name="btCompras">
           <Properties>
             <Property name="text" type="java.lang.String" value="Compras"/>
-            <Property name="actionCommand" type="java.lang.String" value="Compras"/>
             <Property name="name" type="java.lang.String" value="" noResource="true"/>
           </Properties>
           <Events>
