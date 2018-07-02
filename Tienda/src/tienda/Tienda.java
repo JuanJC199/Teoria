@@ -12,9 +12,9 @@ public class Tienda {
      */
     public static void main(String[] args) {
         new MDI().setVisible(true);
-//       Conexion cx = new Conexion() ;
-//       cx.conectar();
-//        new InternalFrames.Proveedores().setVisible(true);
+       Conexion cx = new Conexion() ;
+       cx.conectar();
+        new InternalFrames.Proveedores().setVisible(true);
     }
     
 }
