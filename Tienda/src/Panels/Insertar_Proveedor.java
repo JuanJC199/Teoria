@@ -64,6 +64,11 @@ public class Insertar_Proveedor extends javax.swing.JPanel {
         jLabel6.setText("Estado Cuenta");
 
         jButtonReset.setText("Reset");
+        jButtonReset.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButtonResetMouseClicked(evt);
+            }
+        });
 
         jLabel7.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
         jLabel7.setText("Nacionalidad:");
@@ -215,8 +220,17 @@ public class Insertar_Proveedor extends javax.swing.JPanel {
         }else{
             this.activo = "no";
         }
-            
-        
+    }
+    public void limpiar(){
+        this.jTextContacto.setText("");
+        this.jTextRazon.setText("");
+        this.jTextCiudad.setText("");
+        this.jTextCalle.setText("");
+        this.jTextAvenida.setText("");
+        this.jComboNacionalidad.setSelectedIndex(0);
+        this.jTextTelefono.setText("");
+        this.jTextEstadoCuenta.setText("");
+        this.jRbActivo.setEnabled(false);
     }
     private void jButtonGuardarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonGuardarMouseClicked
         // TODO add your handling code here:
@@ -233,6 +247,11 @@ public class Insertar_Proveedor extends javax.swing.JPanel {
                 this.estado_cuenta
         );
     }//GEN-LAST:event_jButtonGuardarMouseClicked
+
+    private void jButtonResetMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonResetMouseClicked
+        // TODO add your handling code here:
+        this.limpiar();
+    }//GEN-LAST:event_jButtonResetMouseClicked
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
