@@ -28,6 +28,11 @@ public class MDI extends javax.swing.JFrame {
         jMenuProductos = new javax.swing.JMenuItem();
         jMenu_OC = new javax.swing.JMenuItem();
         jMenuItemDocumentos = new javax.swing.JMenuItem();
+
+        jMenuItem1 = new javax.swing.JMenuItem();
+        jMenuItem2 = new javax.swing.JMenuItem();
+        jMenuItem4 = new javax.swing.JMenuItem();
+
         btAlmacen = new javax.swing.JMenu();
         jMenuItemProductos_almacen = new javax.swing.JMenuItem();
         jMenuItemEquivalencias = new javax.swing.JMenuItem();
@@ -106,6 +111,14 @@ public class MDI extends javax.swing.JFrame {
             }
         });
         btCompras.add(jMenuItemDocumentos);
+        jMenuItem1.setText("Proveedores");
+        btCompras.add(jMenuItem1);
+
+        jMenuItem2.setText("Productos");
+        btCompras.add(jMenuItem2);
+
+        jMenuItem4.setText("Ordenes de compra");
+        btCompras.add(jMenuItem4);
 
         jMenuBar1.add(btCompras);
 
@@ -145,6 +158,8 @@ public class MDI extends javax.swing.JFrame {
 
     private void btComprasMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btComprasMouseClicked
         // TODO add your handling code here:
+        
+        //new Compras().setVisible(true);
     }//GEN-LAST:event_btComprasMouseClicked
 
     private void btAlmacenMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btAlmacenMouseClicked
@@ -238,6 +253,7 @@ public class MDI extends javax.swing.JFrame {
     private javax.swing.JMenu btPedidos;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenuBar jMenuBar1;
+
     private javax.swing.JMenuItem jMenuItemDocumentos;
     private javax.swing.JMenuItem jMenuItemEquivalencias;
     private javax.swing.JMenuItem jMenuItemMovimientos;
@@ -246,5 +262,8 @@ public class MDI extends javax.swing.JFrame {
     private javax.swing.JMenuItem jMenuProductos;
     private javax.swing.JMenuItem jMenuProveedores;
     private javax.swing.JMenuItem jMenu_OC;
+    private javax.swing.JMenuItem jMenuItem1;
+    private javax.swing.JMenuItem jMenuItem2;
+    private javax.swing.JMenuItem jMenuItem4;
     // End of variables declaration//GEN-END:variables
 }
