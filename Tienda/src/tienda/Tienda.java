@@ -11,7 +11,8 @@ public class Tienda {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-       new MDI().setVisible(true);
+//       new MDI().setVisible(true);
+       new MDI_SALVADOR().setVisible(true);
        Conexion cx = new Conexion();
        cx.conectar();
 //       cx.desconectar();
