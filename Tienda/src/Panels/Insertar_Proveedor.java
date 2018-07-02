@@ -4,10 +4,14 @@ package Panels;
  *
  * @author PC
  */
+import Clases.daoProveedores;
+import Clases.Proveedores;
 public class Insertar_Proveedor extends javax.swing.JPanel {
-
+    
+    daoProveedores dao;
     public Insertar_Proveedor() {
         initComponents();
+        dao = new daoProveedores();
     }
 
     @SuppressWarnings("unchecked")
@@ -147,7 +151,7 @@ public class Insertar_Proveedor extends javax.swing.JPanel {
 
     private void jButtonGuardarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonGuardarMouseClicked
         // TODO add your handling code here:
-        //        new AddProveedor().setClosed(true);
+        dao.create();
     }//GEN-LAST:event_jButtonGuardarMouseClicked
 
 
