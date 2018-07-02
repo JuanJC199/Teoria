@@ -14,7 +14,6 @@ public class Tienda {
         new MDI().setVisible(true);
        Conexion cx = new Conexion() ;
        cx.conectar();
-        new InternalFrames.Proveedores().setVisible(true);
     }
     
 }
