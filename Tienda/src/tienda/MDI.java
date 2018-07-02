@@ -164,7 +164,6 @@ public class MDI extends javax.swing.JFrame {
 
     private void btAlmacenMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btAlmacenMouseClicked
         // TODO add your handling code here:
-//        new ModuloAlmacen().setVisible(true);
     }//GEN-LAST:event_btAlmacenMouseClicked
 
     private void jMenuProveedoresMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenuProveedoresMouseClicked

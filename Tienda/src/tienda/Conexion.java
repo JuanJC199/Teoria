@@ -5,6 +5,7 @@
  */
 package tienda;
 
+import java.sql.CallableStatement;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
@@ -17,13 +18,18 @@ import java.util.logging.Logger;
  */
 public class Conexion {
     Connection cx;
-    String bd ="Proyecto1";
-    String url= "jdbc:mysql://localhost:3306/Proyecto1";
+    String bd ="sistema_transaccional";
+    String url= "jdbc:mysql://localhost:3306/"+bd;
+    
+    public static void main (String[] args){
+//        Conexion c = new Conexion();
+//        c.conectar();
+    }
     
     public Connection conectar(){
         try{
             Class.forName("com.mysql.jdbc.Driver");
-            cx= DriverManager.getConnection(url,"root","Maria123");
+            cx= DriverManager.getConnection(url,"carlosadmin","sistem123");
             System.out.println("Se conecto bien");
         }catch(Exception e){
             System.out.println("No se conecto");
@@ -31,6 +37,7 @@ public class Conexion {
         return cx;
     }
     
+
     void desconectar(){
         try {
             cx.close();
@@ -38,4 +45,6 @@ public class Conexion {
             Logger.getLogger(Conexion.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
+
+    
 }
