@@ -1,41 +1,43 @@
 package Clases;
-
 import java.sql.CallableStatement;
 import java.sql.Connection;
 import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import tienda.Conexion;
-
 /**
  *
  * @author PC
  */
-public class daoProveedores {
+public class daoProductos_oficina {
     Conexion c;
     
-    public daoProveedores(){
+    public daoProductos_oficina(){
         c = new Conexion();
     }
     
-    public boolean create(String contacto, String razon_social, String ciudad,
-                          String calle, String avenida, String nacionalidad, String telefono,
-                          String activo, String estado_cuenta)
+    public boolean create(String unidad_medida, String linea, String centro_costo, String destino_producto,
+                          String tipo, String activo, String descripcion)
     {
+        System.out.println(unidad_medida);
+        System.out.println(linea);
+        System.out.println(centro_costo);
+        System.out.println(destino_producto);
+        System.out.println(tipo);
+        System.out.println(activo);
+        System.out.println(descripcion);
         try (
             Connection cx = c.conectar();
-            CallableStatement statement = cx.prepareCall("{CALL SP_PROVEEDORES_CREATE(?,?,?,?,?,?,?,?,?)}");
+            CallableStatement statement = cx.prepareCall("{CALL SP_PRODUCTOS_OFICINA_CREATE(?, ?, ?, ?, ?, ?, ?)}");
         ) {
-            statement.setString(1, contacto);
-            statement.setString(2, razon_social);
-            statement.setString(3, ciudad);
-            statement.setString(4, calle);
-            statement.setString(5, avenida);
-            statement.setString(6, nacionalidad);
-            statement.setString(7, telefono);
-            statement.setString(8, activo);
-            statement.setString(9, estado_cuenta);
-            
+            statement.setString(1, unidad_medida);
+            statement.setString(2, linea);
+            statement.setString(3, centro_costo);
+            statement.setString(4, destino_producto);
+            statement.setString(5, tipo);
+            statement.setString(6, activo);
+            statement.setString(7, descripcion);
+    
             statement.execute();
             statement.close();
 //            statement = null;
@@ -51,26 +53,22 @@ public class daoProveedores {
         
     }
     
-    public boolean update(
-            String id_proveedor, String contacto, String razon_social, String ciudad,
-            String calle, String avenida, String nacionalidad, String telefono,
-            String activo, String estado_cuenta)
+    public boolean update(String id_producto_oficina, String unidad_medida, String linea, String centro_costo,
+                          String destino_producto, String tipo, String activo, String descripcion)
     {
         try(
             Connection cx = c.conectar();
-            CallableStatement statement = cx.prepareCall("{CALL SP_PROVEEDORES_UPDATE(?,?,?,?,?,?,?,?,?,?)}");
+            CallableStatement statement = cx.prepareCall("{CALL SP_PRODUCTOS_OFICINA_UPDATE(?,?,?,?,?,?,?,?)}");
             
         ) {
-            statement.setString(1, id_proveedor);
-            statement.setString(2, contacto);
-            statement.setString(3, razon_social);
-            statement.setString(4, ciudad);
-            statement.setString(5, calle);
-            statement.setString(6, avenida);
-            statement.setString(7, nacionalidad);
-            statement.setString(8, telefono);
-            statement.setString(9, activo);
-            statement.setString(10, estado_cuenta);
+            statement.setString(1, id_producto_oficina);
+            statement.setString(2, unidad_medida);
+            statement.setString(3, linea);
+            statement.setString(4, centro_costo);
+            statement.setString(5, destino_producto);
+            statement.setString(6, tipo);
+            statement.setString(7, activo);
+            statement.setString(8, descripcion);
             
             statement.execute();
             statement.close();
@@ -97,7 +95,7 @@ public class daoProveedores {
 //            statement = null;
             c.desconectar();
  
-            System.out.println("siuuuu !!");
+            System.out.println("siuuuu elimina!!");
             return true;
         } catch (SQLException ex) {
             System.out.println("No pudo acceder al procedimiento update ni porra");
